@@ -40,7 +40,7 @@ module.exports = {
         },
         backgroundImage: {
           'hero-pattern':
-            "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+            "url('https://dz8fbjd9gwp2s.cloudfront.net/orgData/5df09d06e4b094730828ec39/pages/assets/images/bnnr1.jpg')",
         },
       },
     },
