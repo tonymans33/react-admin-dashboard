@@ -54,6 +54,7 @@ export default function App() {
           <div>
             <Routes>
               {/* DASHBOARD  */}
+              
               <Route path="/" element={<Ecommerce />} />
               <Route path="/ecommerce" element={<Ecommerce />} />
 
