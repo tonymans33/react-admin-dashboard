@@ -29,6 +29,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   </TooltipComponent>
 );
 
+
 function Navbar() {
   const {
     activeMenu,
