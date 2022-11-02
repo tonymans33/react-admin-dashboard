@@ -77,8 +77,8 @@ export default function App() {
               
 
               <Routes>
+                
                 {/* DASHBOARD  */}
-
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
 
