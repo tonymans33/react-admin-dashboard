@@ -7,8 +7,12 @@ import {
   SparklineAreaData,
   ecomPieChartData,
 } from "../data/dummy";
+import { useStateContext } from "../contexts/ContextProvider";
 
 function Ecommerce() {
+
+  const { currentColor } = useStateContext()
+
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -23,7 +27,7 @@ function Ecommerce() {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
               size="md"
@@ -64,9 +68,9 @@ function Ecommerce() {
       <div className="flex gap-10 flex-wrap justify-center">
         <div className="bg-white dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between">
-            <p className="font-semibold text-xl">Revenue Updates</p>
+            <p className="font-semibold text-xl dark:text-white">Revenue Updates</p>
             <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl dark:text-gray-400">
                 <span>
                   {" "}
                   <GoPrimitiveDot />{" "}
@@ -88,7 +92,7 @@ function Ecommerce() {
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
                 <p>
-                  <span className="text-3xl font-semibold">$93,438</span>
+                  <span className="text-3xl font-semibold dark:text-white">$93,438</span>
                   <span className="p-1.5 hover:dp[er-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
                     23%
                   </span>
@@ -98,7 +102,7 @@ function Ecommerce() {
               </div>
               <div className="mt-8">
                 <p>
-                  <span className="text-3xl font-semibold">$48,438</span>
+                  <span className="text-3xl font-semibold dark:text-white">$48,438</span>
                 </p>
 
                 <p className="text-gray-500 mt-1">Expense</p>
@@ -106,7 +110,7 @@ function Ecommerce() {
 
               <div className="mt-5">
                 <SparkLine
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id="line-sparkLine"
                   type="Line"
                   height="80px"
@@ -118,7 +122,7 @@ function Ecommerce() {
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />

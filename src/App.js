@@ -26,10 +26,10 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 export default function App() {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark': ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           {/* SETTINGS FLOATING BUTTON  */}
@@ -37,8 +37,9 @@ export default function App() {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
+                onClick={() => setThemeSettings(true)}
                 className="text-3xl p-3 hover:drop-hover-xl hover:bg-light-gray text-white"
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: currentColor, borderRadius: "50%" }}
               >
                 <FiSettings />
               </button>
@@ -60,7 +61,7 @@ export default function App() {
           <div
             className={
               activeMenu
-                ? "dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  "
+                ? "dark:bg-main-dark-bg bg-main-bg min-h-screen md:ml-72 w-full  "
                 : "bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 "
             }
           >
@@ -70,6 +71,11 @@ export default function App() {
 
             {/* ROUTES */}
             <div>
+
+              {/* THEME SETTINGS COMPONENT */}
+              {themeSettings && <ThemeSettings />}
+              
+
               <Routes>
                 {/* DASHBOARD  */}
 
