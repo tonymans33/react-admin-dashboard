@@ -20,8 +20,8 @@ function Ecommerce() {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
+              <p className="font-bold text-gray-400 dark:text-gray-900">Earnings</p>
+              <p className="text-2xl dark:text-gray-600">$63,448.78</p>
             </div>
           </div>
           <div className="mt-6">
@@ -89,7 +89,7 @@ function Ecommerce() {
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
 
             {/* LEFT SIDE OF REVENUE SECTION */}
-            <div className="border-r-1 border-color m-4 pr-10">
+            <div className="border-r-1 border-color dark:border-gray-200 m-4 pr-10">
               <div>
                 <p>
                   <span className="text-3xl font-semibold dark:text-white">$93,438</span>
