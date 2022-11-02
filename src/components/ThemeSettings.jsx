@@ -26,7 +26,7 @@ function ThemeSettings() {
 
         <div className="flex-col border-t-1 border-color dark:border-white p-4 ml-4">
           <p className="font-semibold text-lg">Theme Options</p>
-
+    
           <div className="mt-4">
             <input
               type="radio"

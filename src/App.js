@@ -48,11 +48,11 @@ export default function App() {
 
           {/* SIDEBAR */}
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+            <div className="w-72 ease-in-out duration-200 fixed sidebar dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg">
+            <div className="w-0 ease-in-out duration-200 dark:bg-secondary-dark-bg">
               <Sidebar />
             </div>
           )}
@@ -70,14 +70,14 @@ export default function App() {
             </div>
 
             {/* ROUTES */}
-            <div>
+            <div className='ease-in-out duration-200'>
 
               {/* THEME SETTINGS COMPONENT */}
               {themeSettings && <ThemeSettings />}
               
 
               <Routes>
-                
+
                 {/* DASHBOARD  */}
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
